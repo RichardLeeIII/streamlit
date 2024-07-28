@@ -8,7 +8,7 @@ from sklearn.feature_selection import SelectPercentile, mutual_info_regression
 
 df = pd.read_csv('data/used_car_canada_clean.csv')
 
-df = df[df['make'].isin(['toyota', 'honda'])]
+df = df.loc[(df['make'] == 'honda') | (df['make'] == 'toyota')]
 
 # Train/test split
 X = df.drop(['price'], axis=1)

@@ -34,7 +34,7 @@ if __name__ == "__main__":
     pipe = load_model()
 
     with st.form(key="form"):
-        col1, col2, col3 = st.columns(3)
+        col1, col2, col3,col4 = st.columns(4)
 
         with col1:
             st.number_input("Miles", value=86132.0, min_value=0.0, step=0.1, key="miles")
@@ -53,6 +53,7 @@ if __name__ == "__main__":
         with col3:
             st.selectbox("Make", key="make", index=0, options=['toyota', 'honda'])
             st.selectbox("Province", index=0, key="province", options=['NB', 'QC', 'BC', 'ON', 'AB', 'MB', 'SK', 'NS', 'PE', 'NL', 'YT', 'NC', 'OH','SC'])
+        with col4:    
             st.selectbox("trim", index=0, key="trim", options=['Base', 'Three Touring', 'Touring', 'Two', 'L Eco', 'Four', 'II',
        'Three', 'XLE', 'Limited', 'LE', 'IV', 'Persona Series', 'One',
        'Standard', 'Five', 'III', 'LE AWD-e', 'XLE AWD-e',
